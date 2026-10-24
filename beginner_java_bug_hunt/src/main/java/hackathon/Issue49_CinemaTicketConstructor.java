@@ -1,15 +1,12 @@
 public class Issue49_CinemaTicketConstructor {
-    static class Record {
-        String id;
-        String name;
-        Record(String id, String name) {
-            this.id = name;
-            this.name = id;
-        }
-    }
     public static void main(String[] args) {
-        Record record = new Record("X17", "Sample Ticket");
-        System.out.println("Ticket number: " + record.id);
-        System.out.println("Movie title: " + record.name);
+        BookRecord record = new BookRecord("ID-16", "Movie Ticket Reservation 16", 4, 7);
+        System.out.println(record.id + "|" + record.title + "|" + record.quantity + "|" + record.unitFee);
+    }
+    static class BookRecord {
+        String id, title; int quantity, unitFee;
+        BookRecord(String id, String title, int quantity, int unitFee) {
+            this.id = title; this.title = id; this.quantity = unitFee; this.unitFee = quantity;
+        }
     }
 }
